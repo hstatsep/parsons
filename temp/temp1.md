@@ -1,9 +1,9 @@
 ---
 layout: default
-title: NYC Hierarchy
+title: Sprites Construction
 ---
 
-Drag the items to the right in the correct hierarchy of boroughs, neighborhoods, and schools. Sibling items MUST be alphabetical (children of the same parent). HINT: start with <code>nyc</code>.
+Temp
 
 <div id="sortableTrash" class="sortable-code"></div>
 <div id="sortable" class="sortable-code"></div>
@@ -14,26 +14,33 @@ Drag the items to the right in the correct hierarchy of boroughs, neighborhoods,
 </p>
 <script type="text/javascript">
 (function(){
-  var initial = 'nyc\n' +
-    '  brooklyn\n' +
-    '    bay-ridge\n' +
-    '      fort-hamilton\n' +
-    '      hstat\n' +
-    '    sunset-park\n' +
-    '  manhattan\n' +
-    '  queens\n' +
-    '  staten-island\n' +
-    '  the-bronx\n'
+  var initial = "var x = 100;\n" +
+    "x += 1;";
   var parsonsPuzzle = new ParsonsWidget({
     "sortableId": "sortable",
     "max_wrong_lines": 10,
-    "grader": ParsonsWidget._graders.LineBasedGrader,
+    "grader": ParsonsWidget._graders.LanguageTranslationGrader,
     "exec_limit": 2500,
-    "can_indent": true,
+    "can_indent": false,
     "x_indent": 50,
     "lang": "en",
     "show_feedback": true,
-    "trashId": "sortableTrash"
+    "executable_code": "x = 100\nx = x + 1",
+    "programmingLang": "pseudo",
+    "vartests": [
+        {
+            "message": "",
+            "initcode": "",
+            "code": "",
+            "variables": {}
+        },
+        {
+            "message": "",
+            "initcode": "",
+            "code": "",
+            "variables": {}
+        }
+    ]
   });
   parsonsPuzzle.init(initial);
   parsonsPuzzle.shuffleLines();
