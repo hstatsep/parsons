@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Sprites Construction
+title: Temp Example
 ---
 
 Temp
